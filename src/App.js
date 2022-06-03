@@ -79,13 +79,6 @@ function App() {
           y: 0,
         },
       });
-
-      // setTimeout(() => {
-      //   setFinished(false);
-      //   setStart(true);
-      // }, 3000);
-
-      // setTurns(0);
     }
   }, [finished]);
 

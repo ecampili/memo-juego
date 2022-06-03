@@ -22,7 +22,7 @@ const Settings = ({ quantity, setQuantity, turns, setStart }) => {
             Seleccioná la cantidad de personajes:
           </label>
           <select
-            className="appearance-none w-10 text-center"
+            className="appearance-none w-10 text-center cursor-pointer bg-violet-900 text-white text-xl rounded-xl"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             //   disabled={turns !== 0}
