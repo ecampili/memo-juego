@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout1 from './Layout1';
 
 const Result = ({
   turns,
@@ -14,33 +15,31 @@ const Result = ({
     setStart(true);
   };
 
-  //   const handleSettings = () => {
-  //     setTurns(0);
-  //     setFinished(false);
-  //     setStart(true);
-  //   };
   return (
-    <div className="min-h-[400px]  flex flex-col justify-center rounded-lg items-center">
-      <div className="mb-16">
-        <h1 className="text-5xl text-white  mb-10">Genial!!!</h1>
-        <h3 className="text-2xl text-white ">
-          Has descubierto las {quantity} parejas en {turns} intentos.
-        </h3>
-      </div>
+    <Layout1>
+      <h1 className="text-5xl text-white font-bold drop-shadow-2xl contrast-200	mb-10">
+        Genial lo has logrado
+      </h1>
+
+      <h3 className="text-2xl text-white  mb-10">
+        Encontraste las{' '}
+        <span className="text-red-500 contrast-200 font-bold text-4xl  ">
+          {quantity}
+        </span>{' '}
+        parejas en{' '}
+        <span className="text-red-500 contrast-200 font-bold text-4xl">
+          {turns}
+        </span>{' '}
+        intentos.
+      </h3>
 
       <button
         className=" text-lg sm:text-2xl mx-auto w-64 text-white font-bold bg-violet-600 border-2  py-2 rounded-lg hover:bg-violet-900 transition-all duration-500	"
         onClick={handleClick}
       >
-        Volver a jugar
+        Jugar
       </button>
-      {/* <button
-        className="text-white font-bold bg-blue-500 border-2  py-2 px-10 rounded-lg hover:bg-blue-600 transition-all duration-500	"
-        onClick={handleSettings}
-      >
-        Change Settings
-      </button> */}
-    </div>
+    </Layout1>
   );
 };
 

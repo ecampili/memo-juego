@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Card = ({ pk, handleChoice, flipped, disabled }) => {
-  // const [flipped, setFlipped] = useState(false);
-
   const handleClick = () => {
     if (!disabled) {
       handleChoice(pk);
@@ -34,6 +32,7 @@ const Card = ({ pk, handleChoice, flipped, disabled }) => {
             {pk.name}
           </h4>
         </div>
+
         {/* back side */}
         <div
           className=" bg-white  rounded-2xl absolute backface-hidden border-2 w-full h-full"

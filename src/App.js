@@ -5,14 +5,11 @@ import { getCharacters } from './utils/getCharacters';
 import confetti from 'canvas-confetti';
 import Settings from './components/Settings';
 
-const options = [];
-for (let i = 2; i <= 12; i++) {
-  options.push({ value: i, label: i.toString() });
-}
+import MainLayout from './components/MainLayout';
 
 function App() {
   const [items, setItems] = useState([]);
-  const [quantity, setQuantity] = useState(2);
+  const [quantity, setQuantity] = useState(3);
   const [turns, setTurns] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
@@ -99,42 +96,41 @@ function App() {
         setStart={setStart}
       />
     );
+  }
+
+  if (finished) {
+    return (
+      <Result
+        turns={turns}
+        setTurns={setTurns}
+        setFinished={setFinished}
+        setQuantity={setQuantity}
+        quantity={quantity}
+        setStart={setStart}
+      />
+    );
   } else {
     return (
-      <div className="bg-violet-500 min-h-screen">
-        <div className="container mx-auto text-center p-5 ">
-          {/* <h1 className="text-4xl text-white font-bold ">
-            Memo<span className="text-red-500">Juego</span>
-          </h1> */}
-
-          {finished ? (
-            <Result
-              turns={turns}
-              setTurns={setTurns}
-              setFinished={setFinished}
-              setQuantity={setQuantity}
-              quantity={quantity}
-              setStart={setStart}
+      <MainLayout
+        setTurns={setTurns}
+        setFinished={setFinished}
+        setStart={setStart}
+      >
+        <div className="flex flex-wrap justify-center items-center gap-2 mt-5 min-h-[500px] ">
+          {items?.map((pk, index) => (
+            <Card
+              pk={pk}
+              key={index}
+              handleChoice={handleChoice}
+              flipped={pk === choiceOne || pk === choiceTwo || pk.matched}
+              disabled={disabled}
             />
-          ) : (
-            <>
-              <div className="flex flex-wrap justify-center items-center gap-2 mt-5 min-h-[500px] ">
-                {items?.map((pk, index) => (
-                  // <img src={pk.src} alt={pk.name} key={pk.id} />
-                  <Card
-                    pk={pk}
-                    key={index}
-                    handleChoice={handleChoice}
-                    flipped={pk === choiceOne || pk === choiceTwo || pk.matched}
-                    disabled={disabled}
-                  />
-                ))}
-              </div>
-              <div className="mt-5  text-5xl text-white font-bold   mx-auto rounded-full text-center">{`${turns}`}</div>
-            </>
-          )}
+          ))}
         </div>
-      </div>
+        <div className="mt-5  text-5xl text-white font-bold   mx-auto rounded-full text-center">
+          {`${turns}`}
+        </div>
+      </MainLayout>
     );
   }
 }
