@@ -10,7 +10,9 @@ const MainLayout = ({ children, setTurns, setFinished, setStart }) => {
           setFinished={setFinished}
           setStart={setStart}
         />
-        <main className="container mx-auto ">{children}</main>
+        <main className="container mx-auto h-[calc(100vh-32px)] flex flex-col justify-center">
+          {children}
+        </main>
       </div>
     </div>
   );

@@ -116,7 +116,7 @@ function App() {
         setFinished={setFinished}
         setStart={setStart}
       >
-        <div className="flex flex-wrap justify-center items-center gap-2 mt-5 min-h-[500px] ">
+        <div className="flex flex-wrap justify-center items-center gap-2 mt-5  ">
           {items?.map((pk, index) => (
             <Card
               pk={pk}
