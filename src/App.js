@@ -127,7 +127,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="mt-5  text-5xl text-white font-bold   mx-auto rounded-full text-center">
+        <div className="mt-3  text-5xl text-white font-bold   mx-auto rounded-full text-center">
           {`${turns}`}
         </div>
       </MainLayout>
