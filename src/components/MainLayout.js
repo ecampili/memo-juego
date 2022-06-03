@@ -10,7 +10,7 @@ const MainLayout = ({ children, setTurns, setFinished, setStart }) => {
           setFinished={setFinished}
           setStart={setStart}
         />
-        <main className="container mx-auto t">{children}</main>
+        <main className="container mx-auto ">{children}</main>
       </div>
     </div>
   );

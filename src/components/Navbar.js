@@ -7,7 +7,7 @@ const Navbar = ({ setTurns, setFinished, setStart }) => {
     setStart(true);
   };
   return (
-    <div className="container mx-auto flex h-10 justify-between items-center">
+    <div className="container mx-auto flex h-8 justify-between items-center">
       <h1 className="flex-1 text-4xl text-white font-bold drop-shadow-2xl contrast-200	 ">
         Memo<span className="text-red-500">Juego</span>
       </h1>
