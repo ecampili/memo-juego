@@ -13,7 +13,7 @@ const Settings = ({ quantity, setQuantity, turns, setStart }) => {
   };
   return (
     <Layout1>
-      <h1 className="text-7xl text-white font-bold drop-shadow-2xl contrast-200	">
+      <h1 className="text-4xl sm:text-5xl m:text-7xl text-white font-bold drop-shadow-2xl contrast-200	">
         Memo<span className="text-red-500">Juego</span>
       </h1>
 

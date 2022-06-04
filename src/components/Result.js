@@ -17,11 +17,11 @@ const Result = ({
 
   return (
     <Layout1>
-      <h1 className="text-5xl text-white font-bold drop-shadow-2xl contrast-200	mb-10">
+      <h1 className="text-4xl md:text5xl text-white font-bold drop-shadow-2xl contrast-200	mb-10">
         Genial lo has logrado
       </h1>
 
-      <h3 className="text-2xl text-white  mb-10">
+      <h3 className="text-lg sm:text-2xl text-white  mb-10">
         Encontraste las{' '}
         <span className="text-red-500 contrast-200 font-bold text-4xl  ">
           {quantity}
