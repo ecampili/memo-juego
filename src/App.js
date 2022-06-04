@@ -16,6 +16,7 @@ function App() {
   const [disabled, setDisabled] = useState(false);
   const [finished, setFinished] = useState(false);
   const [start, setStart] = useState(true);
+  const [difficulty, setDifficulty] = useState('2000');
 
   // trae los Characters y los  duplica y los mezcla
   useEffect(() => {
@@ -57,10 +58,10 @@ function App() {
       } else {
         setTimeout(() => {
           resetTurn();
-        }, 1000);
+        }, parseInt(difficulty));
       }
     }
-  }, [choiceOne, choiceTwo, items]);
+  }, [choiceOne, choiceTwo, items, difficulty]);
 
   useEffect(() => {
     if (finished) {
@@ -94,6 +95,8 @@ function App() {
         setQuantity={setQuantity}
         turns={turns}
         setStart={setStart}
+        difficulty={difficulty}
+        setDifficulty={setDifficulty}
       />
     );
   }

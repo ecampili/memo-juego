@@ -14,14 +14,14 @@ const Counter = ({ quantity, setQuantity, min, max }) => {
   };
 
   return (
-    <div className="w-80 flex justify-around   font-bold text-xl items-center mt-5 mb-10 ">
+    <div className="w-80 flex justify-around   font-bold text-xl items-center mb-10  border-2 p-5 rounded-2xl bg-violet-400 ">
       <button
         className="bg-slate-300 text-violet-900 hover:bg-violet-900 hover:text-slate-300 rounded-full w-8 h-8 "
         onClick={handleDecrement}
       >
         -
       </button>
-      <h5 className="text-white font-bold text-2xl">{quantity}</h5>
+      <h5 className="text-violet-900 font-bold text-2xl">{quantity}</h5>
       <button
         className="bg-slate-300 text-violet-900 hover:bg-violet-900 hover:text-slate-300 rounded-full w-8 h-8 "
         onClick={handleIncrement}
