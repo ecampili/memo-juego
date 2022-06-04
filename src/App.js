@@ -116,7 +116,7 @@ function App() {
         setFinished={setFinished}
         setStart={setStart}
       >
-        <div className="flex flex-wrap justify-center items-center gap-2 mt-5  ">
+        <div className="flex flex-wrap justify-center items-center gap-2  ">
           {items?.map((pk, index) => (
             <Card
               pk={pk}
@@ -127,7 +127,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="mt-3  text-5xl text-white font-bold   mx-auto rounded-full text-center">
+        <div className="text-center mt-10 text-4xl pb-1 text-white font-bold   ">
           {`${turns}`}
         </div>
       </MainLayout>
